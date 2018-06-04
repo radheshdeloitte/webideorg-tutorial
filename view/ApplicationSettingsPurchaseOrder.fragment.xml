@@ -1,0 +1,38 @@
+<!--
+
+    Copyright (C) 2009-2017 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="idApplicationSettingsDialog" title="{i18n>SETTINGS_TITLE}" verticalScrolling="false">
+		<content>
+			<Panel width="auto" class="sapUiResponsiveMargin" expandable="false" backgroundDesign="Transparent"
+			headerText="{i18n>SELECT_OPTION_TITLE}" tooltip="{i18n>SELECT_OPTION_TOOLTIP}">
+				<content>
+					<VBox id="idContainerSettingsDialog">
+						<CheckBox ariaLabelledBy="idSelectPO" id="idSelectPO" selected="{/SelectPO}" text="{i18n>CHECKBOX_SELECT_PO}"
+						tooltip="{i18n>CHECKBOX_SELECT_PO_TOOLTIP}"/>
+						<CheckBox ariaLabelledBy="idSelectSTO" id="idSelectSTO" selected="{/SelectSTO}" text="{i18n>CHECKBOX_SELECT_STO}"
+						tooltip="{i18n>CHECKBOX_SELECT_STO_TOOLTIP}"/>
+					</VBox>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" expandable="false" backgroundDesign="Transparent"
+			headerText="{i18n>MOBIL_OPTION_TITLE}" tooltip="{i18n>MOBIL_OPTION_TOOLTIP}">
+				<content>
+					<VBox id="idMobilSettingsDialog">
+						<CheckBox ariaLabelledBy="idEnableScanButton" id="idEnableScanButton" selected="{/EnableBarcodeScanning}" text="{i18n>CHECKBOX_EMABLE_SCANNER_PO}"
+						tooltip="{i18n>CHECKBOX_EMABLE_SCANNER_TOOLTIP}"/>
+					</VBox>
+				</content>
+			</Panel>
+		</content>
+		<beginButton>
+			<Button id="idButtonPersonSave" press="handleApplicationSettingsSave" text="{i18n>BUTTON_PERSON_SAVE}" 
+			enabled="{= ${/SelectPO} === true || ${/SelectSTO} === true }"/>
+		</beginButton>
+		<endButton>
+			<Button id="idButtonPersonAbort" press="handleApplicationSettingsAbort" text="{i18n>BUTTON_PERSON_ABORT}"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

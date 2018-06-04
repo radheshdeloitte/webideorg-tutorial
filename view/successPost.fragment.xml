@@ -1,0 +1,21 @@
+<!--
+
+    Copyright (C) 2009-2017 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core">
+  <Dialog id="idSuccessPostDialog" icon="sap-icon://message-success" type="Message" state="Success" title="{i18n>TITLE_SUCC_POST}">
+  
+  <content>
+  
+  <Link id="idMessage" text="{/MessageText}" press="handleFactSheetLinkPress" enabled="{/LinkActive}"/>
+  
+ </content>
+ <beginButton>
+ <Button id="idCloseButton" text="{i18n>BUTTON_SUCC_POST}" press="handlePostCloseButton"/>
+ </beginButton>	
+  </Dialog>
+</core:FragmentDefinition>

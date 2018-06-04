@@ -1,0 +1,22 @@
+<!--
+
+    Copyright (C) 2009-2017 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="idPersonalisationDialog" title="{i18n>TITLE_PERSON}" verticalScrolling="false">
+		<content>
+			<VBox id="idContainer">
+				<RadioButton groupName="QuantityPreset" id="idDeliveredQuantityDefault2open" selected="{/deliveredQuantityDefault2open}" text="{i18n>RADIO_QUANT1_PERSON}"/>
+				<RadioButton groupName="QuantityPreset" id="idDeliveredQuantityDefault20" selected="{/deliveredQuantityDefault20}" text="{i18n>RADIO_QUANT2_PERSON}"/>
+				<CheckBox id="idPresetDocumentItemTextFromPO" selected="{/PresetDocumentItemTextFromPO}" text="{i18n>CHECKBOX_PRESET_TEXT_PERSON}"/>
+			</VBox>
+		</content>
+		<beginButton>
+			<Button id="idButtonPersonSave" press="handlePersonalizationSave" text="{i18n>BUTTON_PERSON_SAVE}"/>
+		</beginButton>
+		<endButton>
+			<Button id="idButtonPersonAbort" press="handlePersonalizationAbort" text="{i18n>BUTTON_PERSON_ABORT}"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

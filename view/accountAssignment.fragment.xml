@@ -1,0 +1,44 @@
+<!--
+
+    Copyright (C) 2009-2017 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:m="sap.m" xmlns="sap.ui.commons" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout">
+	<m:Popover title="{i18n>TITLE_ACC_ASS_DETAILS}" placement="Vertical">
+		<f:SimpleForm id="SimpleFormDisplay354" title="{i18n>TITLE_ACC_ASS_DETAILS}" width="35em" editable="false" layout="ResponsiveGridLayout"
+			labelSpanL="4" labelSpanM="4" labelSpanS="4" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsL="1" columnsM="1">
+			<f:content>
+				<m:Label text="{i18n>LABEL_Category}" id="idCategoryLabel" visible="{= ${oItem>/AcctAssignmentCategory} !== ''}"/>
+				<m:Text
+					text="{parts:[{path:'oItem>/AcctAssignmentCategoryName'}, {path:'oItem>/AcctAssignmentCategory'}], formatter: '.concatenateNameIdFormatter'}"
+					id="idCategoryText" visible="{= ${oItem>/AcctAssignmentCategory} !== ''}"/>
+				<m:Label text="{oData>/#GR4PO_DL_Item/AssetNumber/@sap:label}" id="idAssetNumberLabel" visible="{= ${oItem>/AssetNumber} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/AssetNumberName'}, {path:'oItem>/AssetNumber'}], formatter: '.concatenateNameIdFormatter'}"
+					id="idAssetNumberText" visible="{= ${oItem>/AssetNumber} !== ''}"/>
+				<m:Label text="{oData>/#GR4PO_DL_Item/SubAssetNumber/@sap:label}" id="idSubAssetNumberLabel" visible="{= ${oItem>/AssetNumber} !== ''}"/>
+				<m:Text text="{oItem>/SubAssetNumber}"	id="idSubAssetNumberText" visible="{= ${oItem>/AssetNumber} !== ''}"/>						
+				<m:Label text="{oData>/#GR4PO_DL_Item/CostCenter/@sap:label}" id="idCostCenterLabel" visible="{= ${oItem>/CostCenter} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/CostCenterName'}, {path:'oItem>/CostCenter'}], formatter: '.concatenateNameIdFormatter'}"
+					id="idCostCenterText" visible="{= ${oItem>/CostCenter} !== ''}"/>
+				<m:Label text="{i18n>LABEL_DESCRIPTION}" id="idDescriptionLabel" visible="{= ${oItem>/ProjectDescription} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/ProjectDescription'}, {path:'oItem>/Project'}], formatter: '.concatenateNameIdFormatter'}"
+					id="idDescriptionText" visible="{= ${oItem>/ProjectDescription} !== ''}"/>
+				<m:Label
+					text="{parts:[{path:'oData>/#GR4PO_DL_Item/SalesOrder/@sap:label'}, {path:'i18n>LABEL_SALES_ORDER_ITEMS'}], formatter: '.soformatter'}"
+					id="idSalesOrderLabel" visible="{= ${oItem>/SalesOrder} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/SalesOrder'}, {path:'oItem>/SalesOrderItem'}], formatter: '.soformatter'}" id="idSalesOrderText"
+					visible="{= ${oItem>/SalesOrder} !== ''}"/>
+				<m:Label text="{i18n>LABEL_GL_ACCOUNT}" id="idAccountLabel" visible="{= ${oItem>/GLAccount} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/GLAccountName'}, {path:'oItem>/GLAccount'}], formatter: '.concatenateNameIdFormatter'}" id="idAccountText" visible="{= ${oItem>/GLAccount} !== ''}"/>
+				<m:Label text="{oData>/#GR4PO_DL_Item/FunctionalArea/@sap:label}" id="idFunctionalAreaLabel" visible="{= ${oItem>/FunctionalArea} !== ''}"/>
+				<m:Text text="{oItem>/FunctionalArea}" id="idFunctionalAreaText" visible="{= ${oItem>/FunctionalArea} !== ''}"/>
+				<m:Label text="{oData>/#GR4PO_DL_Item/ProfitCenter/@sap:label}" id="idProfitCenterLabel" visible="{= ${oItem>/ProfitCenter} !== ''}"/>
+				<m:Text text="{parts:[{path:'oItem>/ProfitCenterName'}, {path:'oItem>/ProfitCenter'}], formatter: '.concatenateNameIdFormatter'}"
+					id="idProfitCenterText" visible="{= ${oItem>/ProfitCenter} !== ''}"/>
+				<m:Label text="{oData>/#GR4PO_DL_Item/OrderID/@sap:label}" id="idOrderIDLabel" visible="{= ${oItem>/OrderID} !== ''}"/>
+				<m:Text text="{oItem>/OrderID}" id="idOrderIDText" visible="{= ${oItem>/OrderID} !== ''}"/>
+			</f:content>
+		</f:SimpleForm>
+	</m:Popover>
+</core:FragmentDefinition>

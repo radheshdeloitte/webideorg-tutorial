@@ -1,0 +1,20 @@
+<!--
+
+    Copyright (C) 2009-2017 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ViewSettingsDialog id="idViewSettingsDialog"
+    confirm="handleViewSettingsConfirm"
+    cancel="handleViewSettingsCancel">
+    <sortItems>
+      <ViewSettingsItem id="idMaterial" text="{i18n>TABLE_COLUMN_MATERIAL_TEXT}" key="Material" selected="true" />
+      <ViewSettingsItem id="idMaterialName" text="{i18n>TABLE_COLUMN_MATERIALNAME_TEXT}" key="MaterialName" />
+      <ViewSettingsItem id="idOpenQuantity" text="{i18n>TABLE_COLUMN_OPEN_QUANT_TEXT}" key="OpenQuantity_number" />
+      <ViewSettingsItem id="idDeliveredQuantity_input" text="{i18n>TABLE_COLUMN_DELIV_QUANT_TEXT}" key="DeliveredQuantity_input" />
+    </sortItems>  
+   
+  </ViewSettingsDialog>
+</core:FragmentDefinition>
